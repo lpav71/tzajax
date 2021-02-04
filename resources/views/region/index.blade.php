@@ -21,20 +21,19 @@
                             <td>{{$region->name}}
                             <td>{{$region->translit}} </td>
                             <td>
-                                {!! Form::open(['route' => ['region.destroy', $region->id], 'method' => 'delete']) !!}
-                                <a href="{{ route('region.locality.index', $region->id) }}" class='btn' style="color: #9305e0; padding: 0;font-size: 20px" title='К списку населённых пунктов'>
-                                    <i class="fas fa-arrow-alt-circle-right"></i></a> &nbsp
+                                <div class="btn-group">
+                                    <button class="btn btn-primary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Действия
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="{{ route('region.locality.index',$region->id) }}">К списку населённых пунктов</a>
+                                            <a class="dropdown-item" href="{{ route('region.edit',$region->id) }}">Изменить</a>
+                                            {!! Form::open(['method' => 'DELETE','route' => ['region.destroy', $region->id],'style'=>'display:inline']) !!}
+                                            {!! Form::button('Удалить', ['class' => 'dropdown-item', 'type' => 'submit']) !!}
+                                            {!! Form::close() !!}
+                                    </div>
+                                </div>
 
-                                <a href="{{ route('region.edit', $region->id) }}" class='btn' style="color: #0585e0; padding: 0;font-size: 20px" title='Изменить'>
-                                    <i class="far fa-edit"></i></a> &nbsp
-
-                                {!! Form::button('<i class="far fa-times-circle"></i>', [
-                                      'type' => 'submit',
-                                      'class' => 'btn btn-ghost-danger',
-                                      'style' => 'color: #c51f1a; padding: 0;font-size: 20px',
-                                      'title' => 'Удалить'
-                                 ]) !!}
-                                {!! Form::close() !!}
                             </td>
                         </tr>
                     @endforeach
