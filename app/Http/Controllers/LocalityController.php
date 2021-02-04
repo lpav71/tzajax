@@ -15,7 +15,7 @@ class LocalityController extends Controller
      */
     public function index($region)
     {
-        $localities = Region::find($region)->localities()->paginate(15);
+        $localities = Region::find($region)->localities()->paginate(12);
 
         return view('locality.index',compact('localities', 'region'));
     }

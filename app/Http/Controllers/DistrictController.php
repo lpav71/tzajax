@@ -15,7 +15,7 @@ class DistrictController extends Controller
      */
     public function index($locality)
     {
-        $districts = Locality::find($locality)->districts()->paginate(15);
+        $districts = Locality::find($locality)->districts()->paginate(12);
 
         return view('district.index',compact('locality', 'districts'));
     }
