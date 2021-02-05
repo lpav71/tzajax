@@ -3,7 +3,6 @@
 namespace App\Exceptions;
 
 use ErrorException;
-use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;
 
