@@ -16,4 +16,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/','RegionController@index');
 Route::resource('region','RegionController');
 Route::resource('region.locality', 'LocalityController');
-Route::resource('locality.district', 'DistrictController');
+Route::resource('region.locality.district', 'DistrictController');

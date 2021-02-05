@@ -2,7 +2,7 @@
 
 @section('content')
     <h2>Модификация района</h2>
-    {{ Form::model($district, array('route' => array('locality.district.update', $locality, $district->id), 'method' => 'PUT', 'files'=>true)) }}
+    {{ Form::model($district, array('route' => array('region.locality.district.update',$region, $locality, $district->id), 'method' => 'PUT', 'files'=>true)) }}
 
     <div class="col-md-6">
 

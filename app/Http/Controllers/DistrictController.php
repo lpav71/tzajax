@@ -13,11 +13,11 @@ class DistrictController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($locality)
+    public function index($region, $locality)
     {
         $districts = Locality::find($locality)->districts()->paginate(12);
 
-        return view('district.index',compact('locality', 'districts'));
+        return view('district.index',compact('locality', 'districts', 'region'));
     }
 
     /**
@@ -25,9 +25,9 @@ class DistrictController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create($locality)
+    public function create($region, $locality)
     {
-        return view('district.create',compact('locality'));
+        return view('district.create',compact('locality', 'region'));
     }
 
     /**
@@ -36,7 +36,7 @@ class DistrictController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, $locality)
+    public function store(Request $request, $region,  $locality)
     {
         $request->validate([
             'name' => 'required|string|max:255',
@@ -49,7 +49,7 @@ class DistrictController extends Controller
         $district->translit = $request->translit;
         $locality->districts()->save($district);
 
-        return redirect()->route('locality.district.index',$locality);
+        return redirect()->route('region.locality.district.index',[$region, $locality]);
     }
 
     /**
@@ -69,10 +69,10 @@ class DistrictController extends Controller
      * @param  \App\District  $district
      * @return \Illuminate\Http\Response
      */
-    public function edit($locality, $district)
+    public function edit($region, $locality, $district)
     {
         $district = District::find($district);
-        return view('district.edit', compact('locality', 'district'));
+        return view('district.edit', compact('locality', 'district', 'region'));
     }
 
     /**
@@ -82,7 +82,7 @@ class DistrictController extends Controller
      * @param  \App\District  $district
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $locality, $district)
+    public function update(Request $request, $region,  $locality, $district)
     {
         $locality = Locality::find($locality);
         $district = District::find($district);
@@ -90,7 +90,7 @@ class DistrictController extends Controller
         $district->translit = $request->translit;
         $locality->districts()->save($district);
 
-        return redirect()->route('locality.district.index',$locality);
+        return redirect()->route('region.locality.district.index',[$region, $locality]);
     }
 
     /**
@@ -99,11 +99,11 @@ class DistrictController extends Controller
      * @param  \App\District  $district
      * @return \Illuminate\Http\Response
      */
-    public function destroy($locality, $district)
+    public function destroy($region, $locality, $district)
     {
         $district = District::find($district);
         $district->delete();
 
-        return redirect()->route('locality.district.index',$locality);
+        return redirect()->route('region.locality.district.index',[$region, $locality]);
     }
 }

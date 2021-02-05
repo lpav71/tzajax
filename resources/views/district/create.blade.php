@@ -2,7 +2,7 @@
 
 @section('content')
     <h2>Добавление микрорайона</h2>
-    {{ Form::model($locality, array('route' => array('locality.district.store', $locality), 'method' => 'POST', 'files'=>true)) }}
+    {{ Form::model($locality, array('route' => array('region.locality.district.store', [$region, $locality]), 'method' => 'POST', 'files'=>true)) }}
 
     <div class="col-md-6">
 
