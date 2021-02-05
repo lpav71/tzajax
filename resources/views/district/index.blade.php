@@ -22,7 +22,6 @@
                     <td>{{$district->translit}} </td>
                     <td>
                         {!! Form::open(['route' => ['region.locality.district.destroy',$region, $locality, $district->id], 'method' => 'delete']) !!}
-
                         <a href="{{ route('region.locality.district.edit',[$region, $locality, $district->id] ) }}" class='btn' style="color: #0585e0; padding: 0; font-size: 20px" title='Изменить'>
                         <i class="far fa-edit"></i></a> &nbsp
                         {!! Form::button('<i class="far fa-times-circle"></i>', [
