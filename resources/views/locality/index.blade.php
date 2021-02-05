@@ -4,7 +4,6 @@
     <h2>
     <a href="/" class='btn' style="color: #b10753; font-size: 30px" title='Домой'>
         <i class="fas fa-home"></i></a>
-    <a href="\"><i class="fas fa-arrow-alt-circle-left" style="color: #0471d0; font-size: 30px" title="Назад"></i></a>
         Населенные пункты
         <a href="{{ route('region.locality.create', $region) }}" class='btn btn-ghost-info' style="color: #2d995b; font-size: 30px" title='Добавить'>
             <i class="fas fa-plus-square"></i></a>
