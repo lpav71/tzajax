@@ -15,9 +15,9 @@ class ApiRegionController extends Controller
         return $region;
     }
 
-    public function locality($id)
+    public function locality($region)
     {
-        $locality = Region::find($id)->localities;
+        $locality = Region::find($region)->localities;
         return $locality;
     }
 
