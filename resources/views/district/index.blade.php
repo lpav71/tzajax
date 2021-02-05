@@ -1,5 +1,4 @@
 @extends('layout.app')
-
 @section('content')
     <h2>
         <a href="/" class='btn' style="color: #b10753; font-size: 30px" title='Домой'>
@@ -18,7 +17,6 @@
             </thead>
             <tbody>
             @foreach($districts as $district)
-
                 <tr>
                     <td>{{$district->name}}
                     <td>{{$district->translit}} </td>
@@ -27,7 +25,6 @@
 
                         <a href="{{ route('region.locality.district.edit',[$region, $locality, $district->id] ) }}" class='btn' style="color: #0585e0; padding: 0; font-size: 20px" title='Изменить'>
                         <i class="far fa-edit"></i></a> &nbsp
-
                         {!! Form::button('<i class="far fa-times-circle"></i>', [
                               'type' => 'submit',
                               'class' => 'btn btn-ghost-danger',
@@ -43,4 +40,3 @@
         {{$districts->render()}}
     </div>
 @endsection
-
