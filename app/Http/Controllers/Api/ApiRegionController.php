@@ -9,6 +9,12 @@ use App\Locality;
 
 class ApiRegionController extends Controller
 {
+    public function allregions()
+    {
+        $allregions = Region::all();
+        return $allregions;
+    }
+
     public function region($name)
     {
         $region = Region::where('name','like','%'.$name.'%')->get();

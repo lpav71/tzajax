@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::get('allregions', 'Api\ApiRegionController@allregions');
 Route::get('region/{name}', 'Api\ApiRegionController@region');
 Route::get('region/{region}/locality', 'Api\ApiRegionController@locality');
 Route::get('region/locality/{locality}/district', 'Api\ApiRegionController@district');
