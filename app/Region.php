@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * @method static paginate(int $int)
+ * @method static find(Region $region)
  */
 class Region extends Model
 {
