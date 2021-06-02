@@ -11,7 +11,7 @@ class DistrictController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return
      */
     public function index($region, $locality)
     {
@@ -23,7 +23,7 @@ class DistrictController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return
      */
     public function create($region, $locality)
     {
@@ -34,7 +34,7 @@ class DistrictController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return
      */
     public function store(Request $request, $region,  $locality)
     {
@@ -67,7 +67,7 @@ class DistrictController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  \App\District  $district
-     * @return \Illuminate\Http\Response
+     * @return
      */
     public function edit($region, $locality, $district)
     {
@@ -80,7 +80,7 @@ class DistrictController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \App\District  $district
-     * @return \Illuminate\Http\Response
+     * @return
      */
     public function update(Request $request, $region,  $locality, $district)
     {
@@ -97,7 +97,7 @@ class DistrictController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  \App\District  $district
-     * @return \Illuminate\Http\Response
+     * @return
      */
     public function destroy($region, $locality, $district)
     {

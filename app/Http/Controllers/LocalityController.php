@@ -11,7 +11,7 @@ class LocalityController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return
      */
     public function index($region)
     {
@@ -23,7 +23,7 @@ class LocalityController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return
      */
     public function create($region)
     {
@@ -34,7 +34,7 @@ class LocalityController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return
      */
     public function store(Request $request, $region)
     {
@@ -56,7 +56,7 @@ class LocalityController extends Controller
      * Display the specified resource.
      *
      * @param  \App\Locality  $locality
-     * @return \Illuminate\Http\Response
+     * @return
      */
     public function show(Locality $locality)
     {
@@ -67,7 +67,7 @@ class LocalityController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  \App\Locality  $locality
-     * @return \Illuminate\Http\Response
+     * @return
      */
     public function edit($region, $locality)
     {
@@ -80,7 +80,7 @@ class LocalityController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \App\Locality  $locality
-     * @return \Illuminate\Http\Response
+     * @return
      */
     public function update(Request $request, $region, $locality)
     {
@@ -97,7 +97,7 @@ class LocalityController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  \App\Locality  $locality
-     * @return \Illuminate\Http\Response
+     * @return
      */
     public function destroy($region, $locality)
     {
