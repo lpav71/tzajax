@@ -11,9 +11,11 @@
     <div class="panel-body">
         <table class="table">
             <thead>
+            <tr>
             <th>Имя</th>
             <th>Имя на транслите</th>
             <th>Действия</th>
+            </tr>
             </thead>
             <tbody>
             @foreach($localities as $locality)
