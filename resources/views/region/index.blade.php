@@ -8,7 +8,7 @@
                 <i class="fas fa-plus-square"></i>
                 </a>
             </h1>
-            <div class="panel-body">
+            <div class="panel panel-primary">
                 <table class="table">
                     <thead>
                     <th>Имя</th>

@@ -11,7 +11,7 @@ class LocalityController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function index($region)
     {
@@ -34,7 +34,7 @@ class LocalityController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function store(Request $request, $region)
     {
